@@ -1,0 +1,18 @@
+<% if comment.user %>
+    <p>autor</p>
+    <%= comment.user.name %>
+<% end %>
+<p>
+  <b>Commenter:</b>
+  <%= comment.commenter %>
+</p>
+<p>
+  <b>comment: </b>
+  <%= comment.body %>
+</p>
+<% if session[:user_id] == comment.post.user.id  %>
+<%= link_to 'Destory Comment', [comment.post,comment],
+              :confirm => 'Are you sure',
+              :method => :delete%>
+<% end %>
+<hr>

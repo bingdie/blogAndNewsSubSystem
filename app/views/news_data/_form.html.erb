@@ -1,0 +1,38 @@
+<%= form_for(@news_datum) do |f| %>
+  <% if @news_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news_datum.errors.count, "error") %> prohibited this news_datum from being saved:</h2>
+
+      <ul>
+      <% @news_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :news_title,"标题：" %><br />
+    <%= f.text_field :news_title %>
+  </div>
+  <div class="field">
+    <%= f.label :news_content,"内容：" %><br />
+    <%= f.text_area :news_content %>
+  </div>
+  <div class="field">
+    <%= f.label :news_source,"新闻来源：" %><br />
+    <%= f.text_field :news_source %>
+  </div>
+  <div class="field">
+    <%= f.label :news_cate,"新闻分类：" %><br />
+    <select name="news_cate_id" id="news_datum_news_cate">
+       <option value="0">请选择</option>
+      <% @news_cates.each do |news_cate| %>
+         <option value="<%= news_cate.id %>"><%= news_cate.news_catename  %></option>
+      <% end %>
+    </select>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

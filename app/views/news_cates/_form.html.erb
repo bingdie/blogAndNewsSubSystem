@@ -1,0 +1,29 @@
+<%= form_for(@news_cate) do |f| %>
+  <% if @news_cate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news_cate.errors.count, "error") %> prohibited this news_cate from being saved:</h2>
+
+      <ul>
+      <% @news_cate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :news_iconurl,"类别图标：" %><br />
+    <%= f.text_field :news_iconurl %>
+  </div>
+  <div class="field">
+    <%= f.label :news_catename,"类别名：" %><br />
+    <%= f.text_field :news_catename %>
+  </div>
+  <div class="field">
+    <%= f.label :new_catedesc, "类别说明：" %><br />
+    <%= f.text_area :new_catedesc %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

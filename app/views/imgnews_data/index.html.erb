@@ -1,0 +1,25 @@
+<h1>Listing imgnews_data</h1>
+
+<table>
+  <tr>
+    <th>Imgnews imgurl</th>
+    <th>News data</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @imgnews_data.each do |imgnews_datum| %>
+  <tr>
+    <td><%= imgnews_datum.imgnews_imgurl %></td>
+    <td><%= imgnews_datum.news_data %></td>
+    <td><%= link_to 'Show', imgnews_datum %></td>
+    <td><%= link_to 'Edit', edit_imgnews_datum_path(imgnews_datum) %></td>
+    <td><%= link_to 'Destroy', imgnews_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Imgnews datum', new_imgnews_datum_path %>

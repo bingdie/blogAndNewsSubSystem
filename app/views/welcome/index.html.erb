@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>设置后退按钮文字</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript">
+
+      function ChangeEvent(){
+          $("#pTip").html($("#slider").val());
+      }
+      function $$(id){
+          return document.getElementById(id);
+      }
+
+      function setSpnColor(){
+          var setColor =  "rgb("+$("#txtR").val()+",233,244)";
+          $$("spanPrev").style.backgroundColor = strColor;
+      }
+      $("input[type='radio']").bind("change",
+      function(){
+          $("#pTip").html(this.value);
+      })
+  </script>
+
+</head>
+<body>
+<!--
+<h1>hello rails</h1>
+<p><%= link_to "my Blog ",posts_path %></p>
+<p><%= link_to "add Blog", new_post_path %></p>
+
+<div data-role="page">
+
+  <div data-role="header">
+    <h1>My Title</h1>
+  </div>
+
+  <div data-role="content">
+    <ul data-role="listview" data-inset="true" data-filter="true" data-theme="e">
+      <li><a href="#">Acura</a></li>
+      <li><a href="#">Audi</a></li>
+      <li><a href="#">BMW</a></li>
+      <li><a href="#">Cadillac</a></li>
+      <li><a href="#">Ferrari</a></li>
+    </ul>
+
+    <form>
+      <label for="slider-0">Input slider:</label>
+      <input type="range" name="slider" id="slider-0" value="25" min="0" max="100"  />
+    </form>
+
+    <a href="#" data-role="button" data-icon="star" data-theme="a">Star button</a>
+
+  </div>
+
+  <div data-role="footer"><h1>江南工作室</h1></div>
+</div>
+-->
+<section id="e1" data-role="page" >
+  <header data-role="header" data-position="inline">
+    <h1>图片</h1>
+    <a href="#e2" data-icon="arrow-r" class="ui-btn-right">下一张</a>
+  </header>
+  <div data-role="content" class="content">
+     <span class="img-span">
+       <%= image_tag("rails.png") %>
+     </span>
+  </div>
+    <footer data-role="footer"><h1>@2013 江南工作室</h1></footer>
+
+</section>
+
+<section id="e2" data-role="page" data-add-back-btu="true">
+  <header data-role="header" data-position="inline">
+    <a href="#e1" data-icon="arrow-l" class="ui-btn-left">上一张</a>
+    <h1>图片</h1>
+    <a href="#e3" data-icon="arrow-r" class="ui-btn-right">下一功能</a>
+  </header>
+  <div data-role="content" class="content">
+     <span class="img-span">
+       <%= image_tag("icons-36-white.png") %>
+     </span>
+  </div>
+  <footer data-role="footer"><h1>@2013 江南工作室</h1></footer>
+</section>
+
+<section id="e3" data-role="page" >
+  <header data-role="header">
+    <div data-role="navbar" data-iconpos="left">
+      <ul>
+        <li ><a href="#e3" class="ui-btn-active" data-icon="info">图书</a> </li>
+        <li ><a href="#e4" data-icon="alert">音乐</a></li>
+        <li ><a href="#e5" data-icon="gear">影视</a></li>
+        <li ><a href="#e6" data-icon="star">列表</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <p>这里是图书的详细页面</p>
+
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <a href="#" data-role="button" class="ui-btn-active">确定</a>
+      </div>
+
+      <div class="ui-block-b">
+        <input type="submit" value="取消" />
+      </div>
+    </div>
+
+    <div data-role="controlgroup">
+      <a href="#" data-role="button" data-icon="check" class="ui-btn-active">确定</a>
+      <a href="#" data-role="button" data-icon="delete">取消</a>
+    </div>
+
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" data-role="button" data-icon="check" class="ui-btn-active">确定</a>
+      <a href="#" data-role="button" data-icon="delete">取消</a>
+    </div>
+
+    搜索：<input type="search" name="password" id="search" value=""/>
+    姓名：<input type="text" name="name" id="name" value=""/>
+    年龄：<input type="number" name="number" id="number" value="0"/>
+
+    改变颜色：<input type="range" id="txtR" value="0" min="0" max="255" onchange="setSpnColor()" />
+   <span id="spanPrev">ddddddddddddd</span>   <br>
+
+    <select data-role="slider" id="slider" onchange="ChangeEvent();">
+      <option value="1" >开</option>
+      <option value="0">关</option>
+    </select> <br>
+    <p id="pTip"></p>
+
+    <fieldset data-role="controlgroup" data-type="horizontal">
+    <input type="radio" name="rdoA" id="rdo1" value="1" />
+    <label for="rdo1">1</label>
+    <input type="radio" name="rdoB" id="rdo2" value="2" />
+    <label for="rdo2">2</label>
+    <input type="radio" name="rdoB" id="rdo3" value="3" />
+    <label for="rdo3">3</label>
+  </fieldset>
+
+    <fieldset data-role="controlgroup" data-type="horizontal">
+      <input type="checkbox" name="chkA" id="chk1" value="1" />
+      <label for="chk1">1</label>
+      <input type="checkbox" name="chkB" id="chk2" value="2" />
+      <label for="chk2">2</label>
+      <input type="checkbox" name="chkB" id="chk3" value="3" />
+      <label for="chk3">3</label>
+    </fieldset>
+    <p><a href="#e1" >首页</a> </p>
+  </div>
+
+  <footer data-role="footer">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" data-role="button" data-icon="home">关于公司</a>
+      <a href="#" data-role="button" data-icon="forward">联系我们</a>
+    </div>
+  </footer>
+</section>
+<section id="e4" data-role="page" >
+  <header data-role="header">
+    <div data-role="navbar">
+      <ul>
+        <li ><a href="#e3" data-icon="info">图书</a> </li>
+        <li ><a href="#e4" class="ui-btn-active" data-icon="alert">音乐</a></li>
+        <li ><a href="#e5" data-icon="gear">影视</a></li>
+        <li ><a href="#e6" data-icon="star">列表</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <p>这里是音乐的详细页面</p>
+    <div data-role="collapsible" data-collapsed="true">
+      <h3>点击查看更多</h3>
+      <p>音乐可以陶冶人的情操，使人宁静和安静。。。。。。。。</p>
+    </div>
+    <div data-role="collapsible">
+      <h3>第一层</h3>
+      <div data-role="collapsible">
+        <h4>第二层</h4>
+        <div data-role="collapsible">
+          <h5>第三层</h5>
+          <p>音乐可以陶冶人的情操，使人宁静和安静。。。。。。。。</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-role="collapsible-set">
+      <div data-role="collapsible">
+        <h3>图书</h3>
+        <p><a href="#">文艺</a> </p>
+        <p><a href="#">少儿</a> </p>
+        <p><a href="#">社科</a> </p>
+      </div>
+
+      <div data-role="collapsible">
+        <h3>音乐</h3>
+        <p><a href="#">流行</a> </p>
+        <p><a href="#">民族</a> </p>
+        <p><a href="#">通俗</a> </p>
+      </div>
+
+      <div data-role="collapsible">
+        <h3>影视</h3>
+        <p><a href="#">欧美</a> </p>
+        <p><a href="#">怀旧</a> </p>
+        <p><a href="#">娱乐</a> </p>
+      </div>
+
+    </div>
+
+    <p><a href="#e1" >首页</a> </p>
+  </div>
+  <footer data-role="footer" class="ui-bar" data-position="inline">
+    <select name="selLink" id="selLink">
+      <option value="0">请选择</option>
+      <option value="1">公司1</option>
+      <option value="2">公司2</option>
+      <option value="3">公司3</option>
+      <option value="4">公司4</option>
+    </select>
+  </footer>
+</section>
+
+<section id="e5" data-role="page" data-add-back-btu="true" data-back-btn-text="首页">
+  <header data-role="header">
+    <div data-role="navbar" data-iconpos="bottom">
+      <ul>
+        <li ><a href="#e3" data-icon="info">图书</a> </li>
+        <li ><a href="#e4" data-icon="alert">音乐</a></li>
+        <li ><a href="#e5" class="ui-btn-active" data-icon="gear">影视</a></li>
+        <li ><a href="#e6" data-icon="star">列表</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <p>这里是影视的详细页面</p>
+    <p><a href="#e1" >首页</a> </p>
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <div class="ui-bar ui-bar-b h120">A</div>
+      </div>
+      <div class="ui-block-b">
+        <div class="ui-bar ui-bar-b h120">B</div>
+      </div>
+    </div>
+
+    <div class="ui-grid-b">
+      <div class="ui-block-a">
+        A
+      </div>
+      <div class="ui-block-b">
+        B
+      </div>
+      <div class="ui-block-c">
+        C
+      </div>
+    </div>
+
+    <div class="ui-grid-c">
+      <div class="ui-block-a">
+        A
+      </div>
+      <div class="ui-block-b">
+        B
+      </div>
+      <div class="ui-block-c">
+        C
+      </div>
+
+      <div class="ui-block-d">
+        D
+      </div>
+    </div>
+
+
+  </div>
+  <footer data-role="footer">
+    <h1>@2013 江南工作室</h1>
+  </footer>
+</section>
+
+<section id="e6" data-role="page" data-add-back-btu="true" data-back-btn-text="首页">
+  <header data-role="header">
+    <div data-role="navbar" data-iconpos="bottom">
+      <ul>
+        <li ><a href="#e3" data-icon="info">图书</a> </li>
+        <li ><a href="#e4" data-icon="alert">音乐</a></li>
+        <li ><a href="#e5" data-icon="gear">影视</a></li>
+        <li ><a href="#e6" data-icon="star" class="ui-btn-active">列表</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <!--
+   <ul data-role="listview">
+     <li>
+       <h3>图书</h3>
+       <p>一本好书，一个良师益友！</p>
+       <ul>
+         <li><a href="#">计算机</a></li>
+         <li><a href="#">社科类</a></li>
+       </ul>
+     </li>
+     <li>
+       <h3>音乐</h3>
+       <p>好的音乐可以陶冶人的情操！</p>
+       <ul>
+         <li><a href="#">流行</a></li>
+         <li><a href="#">通俗</a></li>
+       </ul>
+     </li>
+   </ul>
+     -->
+    <ul data-role="listview" data-split-icon="gear" data-split-theme="d">
+      <li>
+        <h3>图书</h3>
+        <p>一本好书，一个良师益友！</p>
+        <ul>
+          <li>
+            <a href="#">
+             <%= image_tag("rails.png") %>
+             <h3>rails 实战</h3>
+             <p>快速入门rails框架</p>
+            </a>
+            <a href="#" data-rel="dialog" data-transition="slideup">
+              2012年作品
+            </a>
+          </li>
+          <li>
+            <a href="#">
+             <%= image_tag("rails.png") %>
+             <h3>rails 实战</h3>
+             <p>快速入门rails框架</p>
+           </a>
+           <a href="#" data-rel="dialog" data-transition="slideup">
+              2012年作品
+           </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>音乐</h3>
+        <p>好的音乐可以陶冶人的情操！</p>
+        <ul>
+          <li><a href="#">
+            <%= image_tag("rails.png") %>
+            <h3>rails 实战</h3>
+            <p>快速入门rails框架</p>
+          </a></li>
+          <li><a href="#">
+            <%= image_tag("rails.png") %>
+            <h3>rails 实战</h3>
+            <p>快速入门rails框架</p>
+          </a></li>
+        </ul>
+      </li>
+    </ul>
+
+  </div>
+  <footer data-role="footer">
+    <h1>@2013 江南工作室</h1>
+  </footer>
+</section>
+
+</body>
+</html>

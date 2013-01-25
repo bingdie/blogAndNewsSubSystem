@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>新闻类别详细页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+
+  </script>
+</head>
+<body>
+
+<section id="page1" data-role="page">
+  <header data-role="header" data-position="fixed"><h1><%= @news_catename %></h1></header>
+  <div data-role="content" class="content">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" data-role="button" data-icon="arrow-l" data-rel="back" data-theme="e">返回</a>
+      <a href="/news_data/new" data-role="button" data-icon="plus" data-theme="b">添加新闻</a>
+    </div><br>
+    <ol data-role="listview">
+      <% if flash[:notice] %>
+          <li><%= flash[:notice] %></li>
+      <% else %>
+          <%= render(@news_data)  %>
+      <% end %>
+
+    </ol>
+  </div>
+  <footer data-role="footer" data-position="fixed" ><h1>@2013 江南工作室</h1></footer>
+</section>
+
+
+</body>
+</html>

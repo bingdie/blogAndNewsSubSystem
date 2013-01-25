@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>管理员登录页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+<section id="page1" data-role="page">
+  <header data-role="header" data-position="fixed" >
+    <h1>江南科技</h1>
+  </header>
+  <div data-role="content" class="content">
+    <form id="form1" name="form1" action="/welcome/log" method="post">
+      <p id="notice"><%= notice %></p>
+      <h3>管理员登录：</h3>
+      <label for="name">用户名：</label>
+      <input type="text" name="name" id="name" value="">
+      <label for="password">密  码：</label>
+      <input type="password" name="password" id="password" value="">
+      <div data-role="controlgroup" data-type="horizontal">
+        <input type="submit" value="登录" data-theme="b" data-ajax="false" data-icon="check" />
+        <a href="/users/new" data-role="button" data-icon="plus">注册</a>
+      </div>
+
+    </form>
+  </div>
+  <footer data-role="footer" data-position="fixed" >
+    <h1>@2013 江南工作室</h1>
+  </footer>
+
+</section>
+
+</body>
+</html>

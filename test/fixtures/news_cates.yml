@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  news_iconurl: MyString
+  news_catename: MyString
+  new_catedesc: MyText
+
+two:
+  news_iconurl: MyString
+  news_catename: MyString
+  new_catedesc: MyText

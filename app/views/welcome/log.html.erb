@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>管理员页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+
+  </script>
+
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+<section id="e1" data-role="page">
+  <header data-role="header" data-position="fixed" >
+    <div data-role="navbar">
+      <ul>
+        <li ><a href="#" class="ui-btn-active" data-icon="info">新闻分类</a> </li>
+        <li ><a href="#" data-icon="plus">增加新闻</a></li>
+        <li ><a href="#" data-icon="gear">@我</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <ul data-role="listview"  data-split-theme="d">
+      <li>
+        <h3>图书</h3>
+        <p>一本好书，一个良师益友！</p>
+        <ul>
+          <li>
+            <a href="#">
+              <%= image_tag("rails.png") %>
+              <h3>rails 实战</h3>
+              <p>快速入门rails框架</p>
+            </a>
+
+          </li>
+          <li>
+            <a href="#">
+              <%= image_tag("rails.png") %>
+              <h3>rails 实战</h3>
+              <p>快速入门rails框架</p>
+            </a>
+
+          </li>
+        </ul>
+      </li>
+     </ul>
+  </div>
+  <footer data-role="footer" data-position="fixed" >
+    <h1>@2013 江南工作室</h1>
+  </footer>
+</section>
+
+
+</body>
+</html>
+

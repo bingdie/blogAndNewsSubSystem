@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>信息详情-江南无线</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<section id="detail_index" data-role="page" data-add-back-btn="true" data-back-btn-text="返回">
+  <header data-role="header" data-position="fixed">
+    <h1><%= @news_datum.news_cate.news_catename %></h1>
+  </header>
+  <div data-role="content" class="content">
+    <p class="border_p01"></p>
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" data-role="button" data-rel="back" data-theme="b" data-icon="arrow-l">返回</a>
+    </div>
+    <p id="notice"><%= notice %></p>
+    <h4><%= @news_datum.news_title %></h4>
+    <p><%= @news_datum.created_at %>  | 来源：<%= @news_datum.news_source %></p>
+    <p><%= @news_datum.news_content %></p>
+  </div>
+  <footer data-role="footer" data-position="fixed"><h1>@2013 江南工作室</h1></footer>
+
+</section>
+
+
+</body>
+</html>

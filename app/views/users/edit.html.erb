@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>用户修改页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+
+  </script>
+</head>
+<body>
+
+<section id="page1" data-role="page">
+  <header data-role="header" data-position="fixed"><h1><%= @user.name %></h1></header>
+  <div data-role="content" class="content">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" data-role="button" data-icon="arrow-l" data-rel="back" data-theme="e">返回</a>
+      <a href="/users/<%=@user.id %>" data-role="button" data-icon="gear"  data-theme="b">显示</a>
+    </div>
+
+    <%= render 'form' %>
+  </div>
+  <footer data-role="footer" data-position="fixed"><h1>@2013 江南工作室</h1></footer>
+
+</section>
+
+
+</body>
+</html>
+
+
+
+
+

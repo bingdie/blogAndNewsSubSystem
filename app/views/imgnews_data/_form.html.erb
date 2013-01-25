@@ -1,0 +1,25 @@
+<%= form_for(@imgnews_datum) do |f| %>
+  <% if @imgnews_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@imgnews_datum.errors.count, "error") %> prohibited this imgnews_datum from being saved:</h2>
+
+      <ul>
+      <% @imgnews_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :imgnews_imgurl %><br />
+    <%= f.text_field :imgnews_imgurl %>
+  </div>
+  <div class="field">
+    <%= f.label :news_data %><br />
+    <%= f.text_field :news_data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

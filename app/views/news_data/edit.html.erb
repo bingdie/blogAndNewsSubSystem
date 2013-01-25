@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>编辑新闻页-江南无线</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<section id="index_index" data-role="page">
+  <header data-role="header" data-position="fixed"><h1 >编辑新闻</h1></header>
+  <div data-role="content" class="content">
+    <%= link_to '显示', @news_datum %> |
+    <a href="#" data-rel="back" >返回</a>|
+    <%= link_to '删除', @news_datum, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= render 'form' %>
+  </div>
+  <footer data-role="footer" data-position="fixed"><h1>@2013 江南工作室</h1></footer>
+</section>
+
+
+</body>
+</html>
+
+
+
+
+

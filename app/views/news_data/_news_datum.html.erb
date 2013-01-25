@@ -1,0 +1,7 @@
+<li>
+  <a href="/news_data/<%= news_datum.id %>">
+    <h3><%= news_datum.news_title %></h3>
+    <p><b>类别：</b><%= news_datum.news_cate.news_catename %>| <b>来源：</b><%= news_datum.news_source %></p>
+  </a>
+  <%= link_to '编辑', edit_news_datum_path(news_datum) %>
+</li>

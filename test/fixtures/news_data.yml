@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  news_title: MyString
+  news_content: MyText
+  news_source: MyString
+  news_cate: 
+
+two:
+  news_title: MyString
+  news_content: MyText
+  news_source: MyString
+  news_cate: 

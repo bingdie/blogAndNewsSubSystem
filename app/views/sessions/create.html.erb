@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>预加载页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript">
+
+  </script>
+
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+<section id="e1" data-role="page">
+  <header data-role="header" data-position="fixed" >
+    <div data-role="navbar">
+      <ul>
+        <li ><a href="#e1" class="ui-btn-active" data-icon="info">图书</a> </li>
+        <li ><a href="#e2" data-icon="alert">音乐</a></li>
+        <li ><a href="#e3" data-icon="gear">@我</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <ul data-role="listview" data-split-icon="gear" data-split-theme="d">
+      <li>
+        <h3>图书</h3>
+        <p>一本好书，一个良师益友！</p>
+        <ul>
+          <li>
+            <a href="#">
+              <%= image_tag("rails.png") %>
+              <h3>rails 实战</h3>
+              <p>11111<%= @name %>快速入门rails框架</p>
+            </a>
+            <a href="#" data-rel="dialog" data-transition="slideup">
+              2012年作品
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <%= image_tag("rails.png") %>
+              <h3>rails 实战</h3>
+              <p>快速入门rails框架</p>
+            </a>
+            <a href="#" data-rel="dialog" data-transition="slideup">
+              2012年作品
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <footer data-role="footer" data-position="fixed" >
+    <h1>@2013 江南工作室</h1>
+  </footer>
+</section>
+
+<section id="e2" data-role="page">
+  <header data-role="header" data-position="fixed" >
+    <div data-role="navbar">
+      <ul>
+        <li ><a href="#e1" data-icon="info">图书</a> </li>
+        <li ><a href="#e2" class="ui-btn-active" data-icon="alert">音乐</a></li>
+        <li ><a href="#e3" data-icon="gear">@我</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <ul data-role="listview" data-split-icon="gear" data-split-theme="d">
+      <li>
+        <h3>音乐</h3>
+        <p>音乐，音乐，音乐。。。</p>
+        <ul>
+          <li>
+            <a href="#">
+              <%= image_tag("rails.png") %>
+              <h3>通俗</h3>
+              <p>一首通俗的音乐</p>
+            </a>
+            <a href="#">
+              更多
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <footer data-role="footer" data-position="fixed" >
+    <h1>@2013 江南工作室</h1>
+  </footer>
+</section>
+
+<section id="e3" data-role="page">
+  <header data-role="header" data-position="fixed" >
+    <div data-role="navbar">
+      <ul>
+        <li ><a href="#e1" data-icon="info">图书</a> </li>
+        <li ><a href="#e2"  data-icon="alert">音乐</a></li>
+        <li ><a href="#e3" class="ui-btn-active" data-icon="gear">@我</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <span>头像： <img src="/assets/rails.png" alt='头像'></span>
+    <span>用户名：<b><%= @name %></b></span><br>
+    <span>密  码：<b><%= @password %></b></span><br>
+    <div data-role="button"><a href="/welcome/fix">退出</a></div>
+  </div>
+  <footer data-role="footer" data-position="fixed" >
+    <h1>@2013 江南工作室</h1>
+  </footer>
+</section>
+
+</body>
+</html>
+
+

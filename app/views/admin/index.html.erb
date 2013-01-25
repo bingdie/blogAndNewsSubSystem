@@ -1,0 +1,21 @@
+<h1>Welcome come</h1>
+
+<p>dear <%= session[:user].name %>  Time is <b><%= Time.now %></b></p>
+<h2>你的文章</h2>
+<p><%= link_to "add new blog", new_post_path %>|<%= link_to "其他人的文章","/other" %></p>
+<table border="1px">
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Content</th>
+    <th>autor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <%= render @posts %>
+
+</table>
+
+

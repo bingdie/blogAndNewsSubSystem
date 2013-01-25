@@ -1,0 +1,13 @@
+<li>
+  <a href="/news_data/find2/<%=news_cate.id %>/<%=news_cate.news_catename %>">
+
+    <% if news_cate.news_iconurl == "" %>
+        <%= image_tag("tool_8.jpg") %>
+    <% else %>
+        <%= image_tag(news_cate.news_iconurl) %>
+    <% end %>
+    <h3><%= news_cate.news_catename %></h3>
+    <p><%= news_cate.new_catedesc %></p>
+  </a>
+  <%= link_to '编辑', edit_news_cate_path(news_cate) %>
+</li>

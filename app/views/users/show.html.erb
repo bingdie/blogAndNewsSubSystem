@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>管理员页面</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<section id="e1" data-role="page">
+  <header data-role="header" data-position="fixed" >
+    <div data-role="navbar">
+      <ul>
+        <li ><a href="/news_cates"  data-icon="info">新闻分类</a> </li>
+        <li ><a href="/news_data/new" data-icon="plus">增加新闻</a></li>
+        <li ><a href="/users/<%=session[:user_id] %>" class="ui-btn-active" data-icon="gear">@我</a></li>
+      </ul>
+    </div>
+  </header>
+  <div data-role="content" class="content">
+    <div data-role="controlgroup" data-type="horizontal">
+      <a href="#" data-role="button" data-icon="arrow-l" data-rel="back" data-theme="e">返回</a>
+      <a href="/users/<%=@user.id %>/edit" data-role="button" data-icon="gear"  data-theme="b">编辑</a>
+    </div>
+    <p>
+      <b>用户名:</b>
+      <%= @user.name %>
+    </p>
+
+    <p>
+      <b>Hashed password:</b>
+      <%= @user.hashed_password %>
+    </p>
+
+    <p>
+      <b>Salt:</b>
+      <%= @user.salt %>
+    </p>
+    <a href="/welcome/logout1" data-role="button" data-icon="alert"  data-theme="b">退出</a>
+  </div>
+  <footer data-role="footer" data-position="fixed" >
+    <h1>@2013 江南工作室</h1>
+  </footer>
+</section>
+
+</body>
+</html>
+
+
